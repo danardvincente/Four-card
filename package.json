@@ -1,0 +1,11 @@
+{
+  "name": "four_card_section",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch scss:dist/css"
+  },
+  "author": "",
+  "license": "ISC"
+}

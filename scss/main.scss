@@ -1,0 +1,155 @@
+@import 'config';
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    background: $main-bg-color;
+    font-family: $font-stack;
+    font-size: 1.8rem;
+}
+
+section {
+    margin: 4rem auto;
+    text-align: center;
+
+    .main-heading {
+        color: $main-heading;
+        font-weight: 200;
+        margin-bottom: 1.8rem;
+
+        .accent {
+            font-weight: 600;
+        }
+    }
+
+    .sale-pitch {
+        font-size: 1.6rem;
+    }
+    
+}
+
+
+p {
+    color: $pg-text;
+    font-weight: 400;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 0 auto;
+    width: 85%;
+
+    .card {
+        background: #fff;
+        width: 37rem;
+        height: 22.5rem;
+        padding: 2.5rem 3.5rem;
+        border-radius: 0.4rem;
+        box-shadow: 0 0 2rem rgba(0,0,0,0.3);
+        position: relative;
+
+        img {
+            position: absolute;
+            bottom: 3.3rem;
+            right: 3.3rem;
+        }
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        color: $main-heading;
+        margin-bottom: 1rem;
+    }
+
+    .card-text {
+        font-size: 1.4rem;
+    }
+
+
+    // Postioning cards
+    .cyan-card {
+        grid-row: span 2;
+        justify-self: end;
+        border-top: 0.3rem solid $cyan-card;
+    }
+
+    .red-card {
+        justify-self: center;
+        border-top: 0.3rem solid $red-card;
+    }
+
+    .orange-card {
+        grid-row: 2;
+        grid-column: 2;
+        justify-self: center;
+        border-top: 0.3rem solid $orange-card;
+    }
+
+    .blue-card {
+        grid-row: span 2;
+        border-top: 0.3rem solid $blue-card;
+    }
+
+}
+
+
+
+@media (max-width: 23.5em) {
+
+     section {
+        margin: 4rem 1.5rem;
+
+        .sale-pitch {
+            font-size: 1.5rem;
+        }
+
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: 1fr;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+        width: 100%;
+        margin: 5.5rem 0;
+
+        .card {
+            width: 85%;
+        }
+
+        .cyan-card {
+            grid-row: 1;
+            justify-self: center;
+        }
+
+        .red-card {
+            grid-row: 2;
+        }
+
+        .orange-card {
+            grid-row: 3;
+            grid-column: 1;
+        }
+
+        .blue-card {
+            grid-row: 4;
+            justify-self: center;
+        }
+    }
+}
